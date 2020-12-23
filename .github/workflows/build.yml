@@ -22,9 +22,9 @@ jobs:
       - name: unzip build wrapper
         run: unzip ./build-wrapper-linux-x86.zip
       - name: run configure
-        run: ./Configure
+        run: .configure
       - name: run build wrapper
-        run: ./build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir build_wrapper_output_directory make clean build_sw
+        run: ./build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir build_wrapper_output_directory make clean all
       - name: run sonar scanner
         run: ./sonar-scanner-4.5.0.2216-linux/bin/sonar-scanner   -Dsonar.organization=$SONAR_ORG   -Dsonar.projectKey=$SONAR_PROJECT_KEY   -Dsonar.sources=.   -Dsonar.host.url=https://sonarcloud.io
         env:
