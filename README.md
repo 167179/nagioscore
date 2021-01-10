@@ -31,7 +31,6 @@ new releases, bug reports, information on discussion forums, and more.
 * Optional web interface for viewing current network status,
   notification and problem history, log file, etc.
 
-
 Changes
 -------
 See the
